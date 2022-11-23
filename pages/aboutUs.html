@@ -95,6 +95,20 @@
                 </div>
             </div>
         </div>
+        <!--Toast-->
+        <div aria-live="polite" aria-atomic="true" class="bg-dark position-relative bd-example-toasts">
+            <div class="toast-container position-absolute p-3 sticky-top" id="toastPlacement">
+                <div class="toast">
+                    <div class="toast-header">
+                        <strong class="me-auto">Welcome</strong>
+                        <small>Now</small>
+                    </div>
+                    <div class="toast-body">
+                        Welcome to our web
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--Text + scrollspy + tooltips-->
         <div id="text holder" class="container bg-dark text-light px-5 text-center rounded-2 w-75 py-2">
             <div class="row">
@@ -459,9 +473,18 @@
                 </div>
             </div>
         </div>
+        <!--Tooltips-->
         <script>
             const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
+        <!--Toast-->
+        <script>
+            window.onload = (event) => {
+                let myAlert = document.querySelector('.toast');
+                let bsAlert = new bootstrap.Toast(myAlert);
+                bsAlert.show();
+            }
         </script>
     </body>
     <style>

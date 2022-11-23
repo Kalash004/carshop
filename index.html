@@ -39,16 +39,27 @@
                     >Login</button>
                     <!--other links-->
                     <div class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle rounded-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          More
+                        <a
+                            class="btn btn-secondary dropdown-toggle rounded-5"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            More
                         </a>
-                      
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="pages/aboutUs.html">About Us</a></li>
-                          <li><a class="dropdown-item" href="#">Contacts</a></li>
-                          <li><a class="dropdown-item" href="#">...</a></li>
+                            <li>
+                                <a class="dropdown-item" href="pages/aboutUs.html">About Us</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Contacts</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">...</a>
+                            </li>
                         </ul>
-                      </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -80,6 +91,20 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Toasts-->
+        <div aria-live="polite" aria-atomic="true" class="bg-dark position-relative bd-example-toasts">
+            <div class="toast-container position-absolute p-3 sticky-top" id="toastPlacement">
+                <div class="toast">
+                    <div class="toast-header">
+                        <strong class="me-auto">Welcome</strong>
+                        <small>Now</small>
+                    </div>
+                    <div class="toast-body">
+                        Welcome to our web
                     </div>
                 </div>
             </div>
@@ -272,6 +297,19 @@
                 </div>
             </div>
         </div>
+        <!--Tooltips-->
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
+        <!--Toast-->
+        <script>
+            window.onload = (event) => {
+                let myAlert = document.querySelector('.toast');
+                let bsAlert = new bootstrap.Toast(myAlert);
+                bsAlert.show();
+            }
+        </script>
     </body>
     <style>
     a:link {
