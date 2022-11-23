@@ -40,7 +40,7 @@
                     <!--other links-->
                     <div class="dropdown">
                         <a
-                            class="btn btn-secondary dropdown-toggle"
+                            class="btn btn-secondary dropdown-toggle rounded-5"
                             href="#"
                             role="button"
                             data-bs-toggle="dropdown"
@@ -63,6 +63,7 @@
                 </div>
             </div>
         </nav>
+        <!--Modal-->
         <div
             class="modal fade"
             id="modal"
@@ -94,6 +95,7 @@
                 </div>
             </div>
         </div>
+        <!--Text + scrollspy + tooltips-->
         <div id="text holder" class="container bg-dark text-light px-5 text-center rounded-2 w-75 py-2">
             <div class="row">
                 <div class="col-2">
@@ -111,13 +113,16 @@
                         class="scrollspy-example"
                         tabindex="0"
                     >
-                        <h3 id="list-item-1">Heading 1
+                        <h3 id="list-item-1">
+                            Heading 1
                         </h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae fuga illo quaerat
                             iure
                             vitae ad recusandae dignissimos repellat quae accusantium quam aut corrupti numquam eligendi
-                            maxime libero enim minima illum amet, doloribus ipsam eaque sequi! Reiciendis ipsam, debitis
+                            maxime
+                            <a href="#" data-bs-toggle="tooltip" data-bs-title="Testing tooltip">libero enim minima illum amet</a>
+                            doloribus ipsam eaque sequi! Reiciendis ipsam, debitis
                             quisquam nostrum possimus nobis commodi cumque, vitae sint dolore perspiciatis porro
                             delectus
                             dolor minima voluptate. Aut aspernatur deserunt perspiciatis quos, explicabo expedita
@@ -219,7 +224,8 @@
                             quae aspernatur veritatis beatae necessitatibus. Sit veniam, officia eaque, obcaecati labore
                             cumque quia doloremque dolorem maxime sequi eum neque rem quo ab?
                         </p>
-                        <h3 id="list-item-2">Heading 2
+                        <h3 id="list-item-2">
+                            Heading 2
                         </h4>
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae commodi at impedit ab
@@ -299,7 +305,8 @@
                                 Quidem
                                 cumque autem fugit repellat.
                         </p>
-                        <h3 id="list-item-3">Heading 3
+                        <h3 id="list-item-3">
+                            Heading 3
                         </h4>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium impedit magni in
@@ -452,6 +459,10 @@
                 </div>
             </div>
         </div>
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
     </body>
     <style>
     a:link {
